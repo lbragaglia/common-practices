@@ -1,2 +1,3 @@
-# common-practices
-A curated list of common software development practices
+# Common Practices
+
+> A curated list of interesting resources on common software development practices.
