@@ -10,7 +10,7 @@ Briefly describe the system/component/flow to which this NFR spec applies.
 May include a simple diagram of the components/flows if this document refers to the whole system.
 
 ## Resiliency and integrity
-# Error handling and failure recovery
+### Error handling and failure recovery
 Describe the error policy approach (fail-fast or fail-safe) and how the errors are handled.
 * Availability of the system in case of failures
 * Are permanent errors distinguished from transient?
@@ -18,7 +18,7 @@ Describe the error policy approach (fail-fast or fail-safe) and how the errors a
 * How are errors signaled or stored?
 * Is there a fall-back action for persistent errors that cannot be recovered (parking to a dead-letter, …)?
 
-# Concurrency and consistency
+### Concurrency and consistency
 Describe the transactional behaviour and the data integrity requirements.
 * Is it a stateful or stateless system?
 * Does the system support multiple concurrent execution (scalability, …)?
@@ -30,42 +30,42 @@ Describe the transactional behaviour and the data integrity requirements.
 
 ## Performance
 Describe the key measures of speed and load that the system must support or guarantee (SLA). For each metrics try to specify different estimates: expected, max, peak, growth rate and scalability, degradation under overload, etc. Include also any other constraints that could impact performance.
-# Metrics
+### Metrics
 * Capacity of the system (number of total entity handled)
 * Throughput for each flow/api (number of transactions per time unit)
 * Response time for each request or message processing (timespan)
 * Resource utilization (size of memory/disk/cpu, network bandwidth)
 * Latency for synchronous calls and data availability/freshness (near real-time, …)
-# Risks
+### Risks
 * Import/export/reporting operations (specify if they are isolated or how could impact live system)
 
 ## Delivery
 Briefly describe how to deliver and operate on a running (production) system.
-# Continuous delivery
+### Continuous delivery
 * How the system is built, tested and deployed (environments/gates/steps, continuous delivery or deployment?)
 * How to perform an upgrade or a rollback
 * How to start/stop/disable/verify and configure a running system (feature flags, (build/deploy/run)-time configuration, environment configuration, …)
-# Operations
+### Operations
 * (runbook and on-call checklist)
 * (backup and restore)
 
 ## Security
-# Security
+### Security
 * access control and permissions
 * how malicious messages/calls are detected and handled
 * encrypted communication channels
-# Privacy
+### Privacy
 * personal information data handling
 * auditing of sensitive/critical actions
 
 ## Observability
 Describe how a running (production) system can be monitored (low-level, the system is working flawless) and observed (hi-level, the system is doing what it is supposed to do).
-# Monitoring
+### Monitoring
 * Which logs and metrics are produced (log rotation policy, retention, …)
 * Is there a way to perform distributed tracing (correlation-id, dyna-trace/x-ray, …)?
 * How errors/alerts are collected/triggered
 * Which dashboards are available (grafana, kibana, …)
-# Observability
+### Observability
 * Which domain KPI are monitored
 * Which dashboards are available (grafana, kibana, …)
 
